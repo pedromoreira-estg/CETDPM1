@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script language="JavaScript">
+		
+		window.onload=operar;
+			
+		function operar() {
+			var botao = document.getElementById("botao");
+			botao.onclick=soma;
+		}
+		
+		function soma() {
+			var input1 = document.getElementById("operando1");
+			var valor1 = parseInt(input1.value);
+			
+			var input2 = document.getElementById("operando2");
+			var valor2 = parseInt(input2.value);
+			
+			var sresultado = document.getElementById("resultado");
+			// alert(span1);
+			
+			var resultado;
+			resultado = valor1 + valor2;
+
+			sresultado.innerHTML = resultado;
+
+		}
+			
+		</script>
+		
+	</head>
+	<body>
+		<h1> A minha primeira página com javascript </h1>
+		
+		<p> primeiro operando é : <input type="text" id="operando1"/></p>
+		
+		<p> segundo operando é : <input type="text" id="operando2"/></p>
+		
+		<p> <input type="button" value="faz operação" id="botao"/></p>
+		
+		<h2> o resultado é : <span id="resultado"></span></h2>
+	
+	</body>
+</html>

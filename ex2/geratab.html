@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<style>
+			td {border: solid 1px}
+		</style>
+		<script language="JavaScript">
+		
+		window.onload = inicializar;
+		
+		function inicializar() {
+			var b = document.getElementById("faz");
+			b.onclick = faztabela;
+		}
+		
+		function faztabela() {
+			var inuml = document.getElementById("nl");
+			var numl = parseInt(inuml.value);
+			
+			var inumc = document.getElementById("nc");
+			var numc = parseInt(inumc.value);
+			
+			// cria a tabela
+			var atabela = document.createElement("table");
+			
+			// para cada linha
+			for(var l=0; l<numl; l++) {
+				var alinha = document.createElement("tr");
+				for(var c=0; c<numc ; c++) {
+					var acelula = document.createElement("td");
+					acelula.innerHTML = "d"+"-"+l.toString()+"-"+c.toString();
+					alinha.appendChild(acelula); 
+				}
+				atabela.appendChild(alinha);
+			}
+			document.body.appendChild(atabela);
+			
+			//alert("nl: "+numl+"---"+"nc: "+numc);
+		}
+			
+		</script>
+	</head>
+	<body>
+		<h1>Gerador de Tabelas</h1>
+		<p>linhas : <input type="text" id="nl" value="1"/></p>
+		<p>colunas: <input type="text" id="nc" value="1"/></p>
+		<p><input type="button" id="faz" value="FAZ TABELA" /></p>
+	</body>
+</html>
