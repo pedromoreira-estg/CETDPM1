@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<discoteca>
+	<albuns>
+		<album genero="rock">
+			<artista>Nirvana</artista>
+			<titulo>Nevermind</titulo>
+			<ano>1991</ano>
+			<tempo>3200</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:NirvanaNevermindalbumcover.jpg"/>
+		</album>
+		<album genero="jazz">
+			<artista>Frank Zappa</artista>
+			<titulo>Hot Rats</titulo>
+			<ano>1969</ano>
+			<tempo>2585</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:Hot_Rats.jpg"/>
+		</album>
+		<album genero="rock">
+			<artista>The Doors</artista>
+			<titulo>LA Woman</titulo>
+			<ano>1971</ano>
+			<tempo>2915</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:The_Doors_-_L.A._Woman.jpg"/>
+		</album>
+		<album genero="heavy metal">
+			<artista>AC/DC</artista>
+			<titulo>Back in Black</titulo>
+			<ano>1980</ano>
+			<tempo>2531</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:ACDC_Back_in_Black.png"/>
+		</album>
+		<album genero="rock">
+			<artista>Beatles</artista>
+			<titulo>Yellow Submarine</titulo>
+			<ano>1969</ano>
+			<tempo>2500</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:TheBeatles-YellowSubmarinealbumcover.jpg"/>
+		</album>
+		<album genero="rock">
+			<artista>Beatles</artista>
+			<titulo>Sgt. Pepper's Lonely Hearts Club Band</titulo>
+			<ano>1967</ano>
+			<tempo>2492</tempo>
+			<capa url="http://en.wikipedia.org/wiki/File:Sgt._Pepper%27s_Lonely_Hearts_Club_Band.jpg"/>
+		</album>
+	</albuns>
+</discoteca>
