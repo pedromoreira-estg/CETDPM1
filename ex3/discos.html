@@ -2,40 +2,57 @@
 	<head>
 		<title>DISCOTECA</title>
 		<script>
-	if (window.XMLHttpRequest)
-  		{// code for IE7+, Firefox, Chrome, Opera, Safari
-  		xmlhttp=new XMLHttpRequest();
-  		}
-	else
-  		{// code for IE6, IE5
-  			xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-  		}
+		// codigo de W3SCHOOLS (existem outras formas de fazer isto)
+		if (window.XMLHttpRequest)
+  			{// code for IE7+, Firefox, Chrome, Opera, Safari
+  				xmlhttp=new XMLHttpRequest();
+  			}
+		else
+  			{// code for IE6, IE5
+  				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  			}
+  	// pedido GET de recurso discoteca.xml síncrono, i.e. apenas
+  	// avança execução quando obtiver a totalidade da resposta (ou erro)	
 	xmlhttp.open("GET","discoteca.xml",false);
 	xmlhttp.send();
+	
+	// a resposta fica guardada na propriedade responseXML
+	// que é um documento DOM XML
 	xmlDoc=xmlhttp.responseXML;
 	
-	os_albuns = xmlDoc.getElementsByTagName("album");
+
 	
-	alert(os_albuns.length);
+	//alert(os_albuns.length);
+	
 	
 	window.onload = mostrar;
 	
 	function mostrar() {
+		// todos os albuns
+		os_albuns = xmlDoc.getElementsByTagName("album");
+		// para cada album
 		for(i=0; i<os_albuns.length; i++) {
+			//cria <div>
 			novodiv = document.createElement("div");
+			// cria <h3>
 			novodivnome = document.createElement("h3");
+			// cria >img>
 			novodivcapa = document.createElement("img");
 			
+			// coloca conteúdo de <titulo> dentro <h3>
 			novodivnome.innerHTML = os_albuns[i].getElementsByTagName("titulo")[0].textContent;
+			// coloca atributo url de <capa> como atributo src de <img>
 			novodivcapa.setAttribute("src",os_albuns[i].getElementsByTagName("capa")[0].getAttribute("url"));
 			
+			// coloca <h3> 'dentro' de <div>
 			novodiv.appendChild(novodivnome);
+			// coloca <img> 'dentro' de <div>, a seguir a <h3>
 			novodiv.appendChild(novodivcapa);
+			// coloca div no final do <body> do documento html
 			document.body.appendChild(novodiv);
 		}
 	}
 	
-
 		</script>
 	</head>
 	<body>
