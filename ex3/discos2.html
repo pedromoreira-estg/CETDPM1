@@ -36,10 +36,18 @@
 		for(i=0; i<os_albuns.length; i++) {
 			// artista
 			o_artista = os_albuns[i].getElementsByTagName("artista")[0].textContent;
-			alert(o_artista);
+			//alert(o_artista);
 			// genero
 			o_genero = os_albuns[i].getAttribute("genero");
-			alert(o_genero);
+			//alert(o_genero);
+			// titulo
+			o_titulo = os_albuns[i].getElementsByTagName("titulo")[0].textContent;
+			// capa
+			a_capa = os_albuns[i].getElementsByTagName("capa")[0].getAttribute("url");
+			// ano
+			o_ano = os_albuns[i].getElementsByTagName("ano")[0].textContent;
+			
+			
 
 		}
 	}
