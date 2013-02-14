@@ -1,0 +1,50 @@
+<html>
+	<head>
+		<title>DISCOTECA</title>
+		<style>
+			td {
+				border: solid black 1px;
+				text-align: center;
+			}
+			.imagemcapa {
+				width:150px;
+				height:150px;
+			}
+			table {
+				width:400px;
+			}
+
+		</style>
+		<script src="../jquery/jquery-1.9.1.min.js"></script>
+		
+		<script>
+	
+		$.get("discoteca.xml",mostra_tabela);
+		
+		function mostra_tabela(documentoXML) {
+			alert(documentoXML);
+			
+			albuns = $(documentoXML).find("album");
+			alert(albuns);
+			
+			$(albuns).each(
+				function () {
+					//alert($(this));
+					o_titulo = $(this).find("titulo")[0];
+					o_titulo_texto = $(o_titulo).text();
+					alert(o_titulo_texto);
+				}
+			)
+		
+			
+			
+			
+		}
+		
+	
+		</script>
+	</head>
+	<body>
+		<h1>os meus discos</h1>
+	</body>
+</html>
