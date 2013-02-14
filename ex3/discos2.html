@@ -1,6 +1,20 @@
 <html>
 	<head>
 		<title>DISCOTECA</title>
+		<style>
+			td {
+				border: solid black 1px;
+				text-align: center;
+			}
+			.imagemcapa {
+				width:150px;
+				height:150px;
+			}
+			table {
+				width:400px;
+			}
+
+		</style>
 		<script>
 		// codigo de W3SCHOOLS (existem outras formas de fazer isto)
 		if (window.XMLHttpRequest)
@@ -34,6 +48,7 @@
 		os_albuns = xmlDoc.getElementsByTagName("album");
 		// para cada album
 		for(i=0; i<os_albuns.length; i++) {
+			// extrair informação
 			// artista
 			o_artista = os_albuns[i].getElementsByTagName("artista")[0].textContent;
 			//alert(o_artista);
@@ -46,9 +61,43 @@
 			a_capa = os_albuns[i].getElementsByTagName("capa")[0].getAttribute("url");
 			// ano
 			o_ano = os_albuns[i].getElementsByTagName("ano")[0].textContent;
+			// construir e preecher o modelo de apresentação
 			
-			
-
+			o_div = document.createElement("div");
+			a_tabela = document.createElement("table");
+			o_div.appendChild(a_tabela);
+			// linha 1
+			o_tr1 = document.createElement("tr");
+			a_tabela.appendChild(o_tr1);
+			o_td11 = document.createElement("td");
+			o_td11.textContent = o_artista;
+			o_tr1.appendChild(o_td11);
+			o_td12 = document.createElement("td");
+			o_td12.textContent = o_titulo;
+			o_tr1.appendChild(o_td12);
+			// fim da linha 1
+			// linha 2
+			o_tr2 = document.createElement("tr");
+			a_tabela.appendChild(o_tr2);
+			o_td21 = document.createElement("td");
+			o_td21.setAttribute("colspan","2");
+			a_tabela.appendChild(o_td21);
+			a_img = document.createElement("img");
+			a_img.setAttribute("src",a_capa);
+			a_img.setAttribute("class","imagemcapa");
+			o_td21.appendChild(a_img);
+			// fim da linha 2
+			// linha 3
+			o_tr3 = document.createElement("tr");
+			a_tabela.appendChild(o_tr3);
+			o_td31 = document.createElement("td");
+			o_td31.textContent = o_ano;
+			o_tr3.appendChild(o_td31);
+			o_td32 = document.createElement("td");
+			o_td32.textContent = o_genero;
+			o_tr3.appendChild(o_td32);
+			// fim da linha 3
+			document.body.appendChild(o_div);
 		}
 	}
 	
