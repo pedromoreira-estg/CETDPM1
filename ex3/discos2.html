@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title>DISCOTECA</title>
+		<script>
+		// codigo de W3SCHOOLS (existem outras formas de fazer isto)
+		if (window.XMLHttpRequest)
+  			{// code for IE7+, Firefox, Chrome, Opera, Safari
+  				xmlhttp=new XMLHttpRequest();
+  			}
+		else
+  			{// code for IE6, IE5
+  				xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  			}
+  			
+  	// pedido GET de recurso discoteca.xml síncrono, i.e. apenas
+  	// avança execução quando obtiver a totalidade da resposta (ou erro)	
+	xmlhttp.open("GET","discoteca.xml",false);
+	xmlhttp.send();
+	
+	// a resposta fica guardada na propriedade responseXML
+	// que é um documento DOM XML
+	xmlDoc=xmlhttp.responseXML;
+	
+
+	
+	//alert(os_albuns.length);
+	
+	
+	window.onload = mostrar;
+	
+	function mostrar() {
+		// todos os albuns
+		os_albuns = xmlDoc.getElementsByTagName("album");
+		// para cada album
+		for(i=0; i<os_albuns.length; i++) {
+
+		}
+	}
+	
+		</script>
+	</head>
+	<body>
+		<h1>os meus discos</h1>
+	</body>
+</html>
