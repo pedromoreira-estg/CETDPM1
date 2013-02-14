@@ -28,11 +28,18 @@
 	
 	window.onload = mostrar;
 	
+	
 	function mostrar() {
 		// todos os albuns
 		os_albuns = xmlDoc.getElementsByTagName("album");
 		// para cada album
 		for(i=0; i<os_albuns.length; i++) {
+			// artista
+			o_artista = os_albuns[i].getElementsByTagName("artista")[0].textContent;
+			alert(o_artista);
+			// genero
+			o_genero = os_albuns[i].getAttribute("genero");
+			alert(o_genero);
 
 		}
 	}
