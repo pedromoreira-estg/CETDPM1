@@ -5,6 +5,7 @@
 			td {
 				border: solid black 1px;
 				text-align: center;
+				width:50%;
 			}
 			.imagemcapa {
 				width:150px;
@@ -22,7 +23,7 @@
 		$.get("discoteca.xml",mostra_tabela);
 		
 		function mostra_tabela(documentoXML) {
-			alert(documentoXML);
+			//alert(documentoXML);
 			
 			albuns = $(documentoXML).find("album");
 			
@@ -63,6 +64,7 @@
 					o_td11 = $("<td/>");
 					o_tr1.append(o_td11);
 					o_td11.text(o_artista);
+
 					
 					o_td12 = $("<td/>");
 					o_tr1.append(o_td12);
@@ -70,6 +72,7 @@
 					
 					o_tr2  = $("<tr/>");
 					a_tabela.append(o_tr2);
+
 					
 					o_td21 = $("<td/>");
 					o_tr2.append(o_td21);
@@ -89,6 +92,15 @@
 					o_td32 = $("<td/>");
 					o_tr3.append(o_td32);
 					o_td32.text(o_genero);
+					
+					
+										
+					//---------------------
+					o_tr2.hide();
+					o_td11.click(function () {
+						$(this).parent().next().toggle();
+						});
+					//---------------------
 				}
 			);
 		

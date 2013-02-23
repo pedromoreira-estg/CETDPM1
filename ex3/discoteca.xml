@@ -6,7 +6,7 @@
 			<titulo>Nevermind</titulo>
 			<ano>1991</ano>
 			<tempo>3200</tempo>
-			<capa url="http://upload.wikimedia.org/wikipedia/en/thumb/b/b7/NirvanaNevermindalbumcover.jpg/220px-NirvanaNevermindalbumcover.jpg"/>
+			<capa url="imagens/nirvana.jpg"/>
 		</album>
 		<album genero="jazz">
 			<artista>Frank Zappa</artista>
