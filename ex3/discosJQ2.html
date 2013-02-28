@@ -36,19 +36,19 @@
 					// extrai titulo
 					//o_titulo_elemento = $(this).find("titulo")[0];
 					//o_titulo = $(o_titulo_elemento).text();
-					o_titulo = $($(this).find("titulo")[0]).text();
+					o_titulo = $(this).find("titulo").text();
 					
 					// extrai genero
 					o_genero = $(this).attr("genero");
 				
 					// extrai artista
-					o_artista = $($(this).find("artista")[0]).text();
+					o_artista = $(this).find("artista").text();
 					
 					// extrai capa
-					a_capa = $($(this).find("capa")[0]).attr("url");
+					a_capa = $(this).find("capa").attr("url");
 					
 					// extrai ano
-					o_ano = $($(this).find("ano")[0]).text();
+					o_ano = $(this).find("ano").text();
 					
 					// cria div
 					o_div = $("<div/>");
@@ -98,7 +98,7 @@
 					//---------------------
 					o_tr2.hide();
 					o_td11.click(function () {
-						$(this).parent().next().toggle();
+						$(this).parent().next().fadeToggle(1800);
 						});
 					//---------------------
 				}
@@ -106,6 +106,7 @@
 		
 			
 		}
+		
 		
 		function  mostra() {
 			alert(this.textContent);
