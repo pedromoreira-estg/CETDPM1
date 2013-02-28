@@ -11,15 +11,15 @@
 				$("div.detalhe img").css("width","200px");
 				
 				$("p.titulo").click(function () {
-					//o_contentor = $(this).parent();
-					//o_detalhe = o_contentor.find("div.detalhe");
-					//o_detalhe.toggle();
+					o_contentor = $(this).parent();
+					o_detalhe = o_contentor.find("div.detalhe");
+					o_detalhe.toggle();
 					
 					//$(this).parent().find("div.detalhe").toggle();
 					
 					//$(this).parent().find("div.detalhe").fadeToggle(800);
 					
-					$(this).parent().find("div.detalhe").slideToggle(800);
+					//$(this).parent().find("div.detalhe").slideToggle(800);
 				});
 				
 				$("div.detalhe").hide();
