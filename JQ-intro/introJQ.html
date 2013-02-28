@@ -11,9 +11,10 @@
 				$("div.detalhe img").css("width","200px");
 				
 				$("p.titulo").click(function () {
-					o_contentor = $(this).parent();
-					o_detalhe = o_contentor.find("div.detalhe");
-					o_detalhe.toggle();
+					//o_contentor = $(this).parent();
+					//o_detalhe = o_contentor.find("div.detalhe");
+					//o_detalhe.toggle();
+					$(this).parent().find("div.detalhe").toggle();
 				});
 				
 				$("div.detalhe").hide();
@@ -28,7 +29,7 @@
 				<img src='http://1.bp.blogspot.com/-twID0Pi4fvI/UJg4WA3loaI/AAAAAAAAOrA/9_TUETA-DTw/s1600/6.jpg'>
 				</div>
 		</div>
-				<div class="contentor">
+		<div class="contentor">
 			<p class="titulo"> Greve geral dos caçadores de aranhas</p>
 			<div class="detalhe">
 				<p> O filho de Steve Irwin – o famoso “Caçador de Crocodilos”, que morreu aos 44 anos atingido pelo ferrão de uma arraia, durante as filmagens de um documentário subaquático –, está seguindo os passos do pai. O garoto de oito anos, chamado Robert, tem alimentado crocodilos de água doce no zoológico da Austrália. </p>
