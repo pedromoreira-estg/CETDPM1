@@ -39,12 +39,15 @@
 				my_li = $("<li/>");
 				my_p1 = $("<p/>");
 				my_p1.click(mostra);
+				
 				my_p1.text($(this).attr("user"));
 				my_p2 = $("<p/>");
 				my_img =$("<img/>");
 				my_img.attr("src", $(this).attr("avatar"));
+				
 				my_div = $("<div/>");
 				my_div.text($(this).text());
+				
 				my_div.hide();
 				
 				my_li.append(my_p1);
