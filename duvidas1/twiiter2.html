@@ -1,0 +1,85 @@
+<html>
+	<head>
+		
+		<title> o meu twitter </title>
+		<script src="jquery-1.9.1.min.js"></script>
+		<style>
+			ul.tw img {
+				width:32px;
+				}
+			ul.tw li {
+				list-style: none;
+				background-color: gold;			
+				}
+			ul.tw li>p {
+				font-weight:bold;
+				color:navy;
+			}
+		</style>
+		
+		<script>
+		
+		$(document).ready(mostra_tweets);
+		
+		function mostra_tweets() {
+			// ler o XML
+			$.get("tweet.xml",render_tweets);
+		}
+		
+		function render_tweets(dataXML) {
+			
+			my_ul = $("<ul/>");
+			my_ul.addClass("tw");
+			
+			$("body").append(my_ul);
+			
+			listadetweets = $(dataXML).find("tweet");
+			
+			$(listadetweets).each( function () {
+				my_li = $("<li/>");
+				my_p1 = $("<p/>");
+				my_p1.click(mostra);
+				my_p1.text($(this).attr("user"));
+				my_p2 = $("<p/>");
+				my_img =$("<img/>");
+				my_img.attr("src", $(this).attr("avatar"));
+				my_div = $("<div/>");
+				my_div.text($(this).text());
+				my_div.hide();
+				
+				my_li.append(my_p1);
+				
+				my_p2.append(my_img);
+				my_li.append(my_p2);
+				
+				my_li.append(my_div);
+				
+				my_ul.append(my_li);
+				
+			});
+			
+			function mostra() {
+				$(this).parent().find('div').toggle();
+			}
+		}
+			
+			
+			
+		</script>
+	</head>
+	<body>	
+		<!--
+		<ul class="tw">
+			<li>
+				<div>
+					<p>user</p>
+					<p><img src="#"><img></p>
+					<div>
+						corpo
+					</div>
+				</div>
+			</li>
+		</ul>
+		-->	
+	</body>
+</html>
