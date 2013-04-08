@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+	Cada mensagem deve conter os seguintes campos:
+●	O corpo da mensagem.
+●	O nome do utilizador que escreveu a mensagem.
+●	Uma imagem que representa o utilizador.
+-->
+<twitter>
+	<tweets>
+		<tweet user="bruno" avatar="images/bruno.jpg">
+			eu já estou a perceber de XML
+		</tweet>
+		<tweet user="sara" avatar="images/sara.jpg">
+			eu estou quase!
+		</tweet>
+		<tweet user="regina" avatar="images/regina.jpg">
+			estou farta desta brincadeira.
+		</tweet>
+	</tweets>
+</twitter>
